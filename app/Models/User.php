@@ -16,10 +16,13 @@ class User extends Authenticatable
      *
      * @var array
      */
+    protected $table = 'users';
+
     protected $fillable = [
         'name',
         'email',
         'password',
+        'role',
     ];
 
     /**
@@ -40,4 +43,19 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function images()
+    {
+        return $this->morphOne(Image::class, 'imgable');
+    }
+
+    public function courses()
+    {
+        return $this->belongsToMany(Course::class, 'user_course', 'user_id', 'course_id')->withPivot('status');
+    }
+
+    public function lessons()
+    {
+        return $this->belongsToMany(Lesson::class, 'user_lesson', 'user_id', 'lesson_id')->withPivot('status');
+    }
 }
