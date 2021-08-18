@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LanguageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('pages.user.home');
+})->name('home');
+
+Route::get('change-language/{language}', [LanguageController::class, 'index'])->name('change-language');
+
+Route::get('/course', function () {
+    return view('pages.user.courses_list');
+})->name('course');
