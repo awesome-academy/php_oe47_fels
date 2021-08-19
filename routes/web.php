@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LanguageController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +22,16 @@ Route::get('/', function () {
 
 Route::get('change-language/{language}', [LanguageController::class, 'index'])->name('change-language');
 
+Route::resource('login', LoginController::class);
+
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
+Route::resource('register', RegisterController::class);
+
 Route::get('/course', function () {
     return view('pages.user.courses_list');
 })->name('course');
+
+//Google login
+Route::get('login/google', [LoginController::class, 'redirectToGoogle'])->name('login.google');
+Route::get('login/google/callback', [LoginController::class, 'handleGoogleCallback']);

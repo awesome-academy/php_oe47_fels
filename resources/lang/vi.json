@@ -22,5 +22,10 @@
 	"title3": "Hệ thống E-learning Framgia là hệ thống học từ vựng tiếng Anh tốt nhất, bạn sẽ có những trải nghiệm học tập rất hiệu quả",
 	"Helpful Links": "Liên kết hữu ích",
 	"Enter Your Email": "Nhập email của bạn",
-	"Our_Courses": "Các chủ đề"
+	"Our_Courses": "Các chủ đề",
+	"Email or password are wrong": "Email hoặc password không đúng",
+	"Login not success": "Đăng nhập thất bại",
+	"Logout success": "Đăng xuất thành công",
+	"Regiter not success": "Đăng kí không thành công",
+	"Regiter success": "Đăng kí thành công"
 }

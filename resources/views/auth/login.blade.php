@@ -21,12 +21,12 @@
                 <div class="signin-content">
                     <div class="signin-image">
                         <figure><img src="{{ asset('assets/image/signin-image.jpg') }}" alt="sing up image"></figure>
-                        <a href="{{ route('register') }}" class="signup-image-link">Create an account</a>
+                        <a href="{{ route('register.create') }}" class="signup-image-link">Create an account</a>
                     </div>
 
                     <div class="signin-form">
                         <h2 class="form-title">Login to Framgia</h2>
-                        <form method="POST" action="{{ route('post.login') }}" class="register-form">
+                        <form method="POST" action="{{ route('login.store') }}" class="register-form">
                             @csrf
                             <div class="form-group">
                                 <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
@@ -47,7 +47,7 @@
                         <div class="social-login">
                             <span class="social-label">Or login with</span>
                             <ul class="socials">
-                                <li><a href="{{ route('login.facebook') }}"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
+                                <li><a href="{{ route('login.index') }}"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
                                 <li><a href="{{ route('login.google') }}"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
                             </ul>
                         </div>
@@ -55,7 +55,6 @@
                 </div>
             </div>
         </section>
-
     </div>
 
     <!-- JS -->

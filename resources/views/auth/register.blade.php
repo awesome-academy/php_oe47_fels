@@ -22,7 +22,7 @@
                 <div class="signup-content">
                     <div class="signup-form">
                         <h2 class="form-title">Sign up to Framgia</h2>
-                        <form method="POST" action="{{ route('post.register') }}" class="register-form">
+                        <form method="POST" action="{{ route('register.store') }}" class="register-form">
                             @csrf
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
@@ -51,7 +51,7 @@
                     </div>
                     <div class="signup-image">
                         <figure><img src="{{ asset('assets/image/signup-image.jpg') }}" alt="sing up image"></figure>
-                        <a href="{{ route('get.login') }}" class="signup-image-link">I am already member</a>
+                        <a href="{{ route('login.create') }}" class="signup-image-link">I am already member</a>
                     </div>
                 </div>
             </div>

@@ -30,6 +30,13 @@
                       <li><a href="{{route('change-language',['en'])}}"><img src="{{ asset('assets/image/en.png') }}"></a></li>
                       <li><a href="{{route('change-language',['vi'])}}"><img src="{{ asset('assets/image/vn.png') }}"></a></li>
                    </ul>
+                   <ul>
+                     @if(Auth::check())
+                     <li><a class="btn_login " href="{{route('logout')}}">LOG OUT</a></li>
+                     @else
+                     <li><a class="btn_login " href="{{route('login.create')}}">LOG IN</a></li>
+                     @endif
+                  </ul>
                 </div>
              </div>
           </nav>
