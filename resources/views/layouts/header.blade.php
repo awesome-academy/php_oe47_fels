@@ -29,8 +29,6 @@
                    <ul>
                       <li><a href="{{route('change-language',['en'])}}"><img src="{{ asset('assets/image/en.png') }}"></a></li>
                       <li><a href="{{route('change-language',['vi'])}}"><img src="{{ asset('assets/image/vn.png') }}"></a></li>
-                      <li><a href="#">{{ trans('Login') }}</a></li>
-                      
                    </ul>
                 </div>
              </div>
@@ -38,3 +36,4 @@
        </div>
     </div>
  </div>
+ 
