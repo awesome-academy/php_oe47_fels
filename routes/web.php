@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LanguageController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 
@@ -28,9 +29,9 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::resource('register', RegisterController::class);
 
-Route::get('/course', function () {
-    return view('pages.user.courses_list');
-})->name('course');
+Route::get('/course-list', [HomeController::class, 'showCourse'])->name('course.list');
+
+Route::get('/lesson-list/{id}', [HomeController::class, 'showLesson'])->name('lesson.list');
 
 //Google login
 Route::get('login/google', [LoginController::class, 'redirectToGoogle'])->name('login.google');
