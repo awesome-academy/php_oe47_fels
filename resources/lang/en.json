@@ -22,5 +22,10 @@
 	"title3": "Framgia E-learning system is the best system for learn vocabulary english.You will have very effective learning experiences",
 	"Helpful Links": "Helpful Links",
 	"Enter Your Email": "Enter Your Email",
-	"Our_Courses": "Our Courses"
+	"Our_Courses": "Our Courses",
+	"Email or password are wrong": "Email or password are wrong",
+	"Login not success": "Login not success",
+	"Logout success": "Logout success",
+	"Regiter success": "Regiter success",
+	"Regiter not success": "Regiter not success"
 }
