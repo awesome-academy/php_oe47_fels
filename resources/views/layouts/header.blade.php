@@ -16,7 +16,7 @@
                       <a class="nav-link" href="about.html">{{ trans('About')}}</a>
                    </li>
                    <li class="nav-item">
-                      <a class="nav-link" href="{{ route('course') }}">{{ trans('Courses')}}</a>
+                      <a class="nav-link" href="{{ route('course.list') }}">{{ trans('Courses')}}</a>
                    </li>
                    <li class="nav-item">
                       <a class="nav-link" href="blog.html">{{ trans('Blog')}}</a>
