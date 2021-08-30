@@ -31,8 +31,11 @@ Route::resource('register', RegisterController::class);
 
 Route::get('/course-list', [HomeController::class, 'showCourse'])->name('course.list');
 
-Route::get('/lesson-list/{id}', [HomeController::class, 'showLesson'])->name('lesson.list');
-
 //Google login
 Route::get('login/google', [LoginController::class, 'redirectToGoogle'])->name('login.google');
 Route::get('login/google/callback', [LoginController::class, 'handleGoogleCallback']);
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/lesson-list/{id}', [HomeController::class, 'showLesson'])->name('lesson.list');
+    Route::get('/lesson-detail/{id}', [LessonController::class, 'showLessonDetail'])->name('lesson.detail');
+});
