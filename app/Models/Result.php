@@ -5,26 +5,27 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Question extends Model
+class Result extends Model
 {
     use HasFactory;
 
-    protected $table = 'questions';
+    protected $table = 'results';
 
     protected $fillable=[
+        'user_id',
         'quizes_id',
-        'question',
-        'answer',
+        'total_mark',
+        'yes_ans',
+        'no_ans',
+        'date',
         'status',
-        'options',
-        'note',
+        'result_json',
     ];
     
-    public function optionsdata()
+    public function user()
     {
-        return $this->hasMany(Options::class, 'questions_id')->inRandomOrder();
+        return $this->belongsTo(User::class);
     }
-
     public function quizes()
     {
         return $this->belongsTo(Quizes::class);
