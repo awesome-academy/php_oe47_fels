@@ -28,6 +28,6 @@ class Result extends Model
     }
     public function quizes()
     {
-        return $this->belongsTo(Quizes::class);
+        return $this->belongsTo(Quiz::class);
     }
 }
