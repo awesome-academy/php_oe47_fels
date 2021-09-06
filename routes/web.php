@@ -38,4 +38,6 @@ Route::get('login/google/callback', [LoginController::class, 'handleGoogleCallba
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/lesson-list/{id}', [HomeController::class, 'showLesson'])->name('lesson.list');
     Route::get('/lesson-detail/{id}', [LessonController::class, 'showLessonDetail'])->name('lesson.detail');
+    Route::get('quizes_list', [QuizController::class, 'index'])->name('quiz_list');
+    Route::get('/exam-start/{id}', [ExamController::class, 'exam'])->name('exam.start');
 });
