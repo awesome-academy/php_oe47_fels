@@ -39,5 +39,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/lesson-list/{id}', [HomeController::class, 'showLesson'])->name('lesson.list');
     Route::get('/lesson-detail/{id}', [LessonController::class, 'showLessonDetail'])->name('lesson.detail');
     Route::get('quizes_list', [QuizController::class, 'index'])->name('quiz_list');
+    Route::post('/exams', [ExamController::class, 'examPost'])->name('exams');
     Route::get('/exam-start/{id}', [ExamController::class, 'exam'])->name('exam.start');
+    Route::get('/exam-result', [ExamController::class, 'examResult'])->name('exam.result');
+    Route::get('/result-detail/{id}', [ExamController::class, 'resultDetails'])->name('exam.resultDetail');
 });
