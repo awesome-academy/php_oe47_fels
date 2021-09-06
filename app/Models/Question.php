@@ -22,11 +22,11 @@ class Question extends Model
     
     public function optionsdata()
     {
-        return $this->hasMany(Options::class, 'questions_id')->inRandomOrder();
+        return $this->hasMany(Option::class, 'questions_id')->inRandomOrder();
     }
 
     public function quizes()
     {
-        return $this->belongsTo(Quizes::class);
+        return $this->belongsTo(Quiz::class);
     }
 }
