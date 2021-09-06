@@ -29,5 +29,12 @@
 	"Regiter not success": "Đăng kí không thành công",
 	"Regiter success": "Đăng kí thành công",
 	"LESSON LIST OF COURSE": "DANH SÁCH BÀI HỌC CỦA CHỦ ĐỀ",
-	"from course": "từ chủ đề"
+	"from course": "từ chủ đề",
+	"List of Exam": "Danh sách bài kiếm tra",
+	"Number": "Số",
+	"Exam Title": "Tiêu đề của bài kiếm tra",
+	"Exam Time": "Thời gian",
+	"Total Question": "Tổng số câu hỏi",
+	"Action": "Hành động",
+	"Start Exam": "Bắt đầu làm bài"
 }
