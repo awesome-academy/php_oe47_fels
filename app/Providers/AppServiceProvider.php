@@ -47,6 +47,11 @@ class AppServiceProvider extends ServiceProvider
             \App\Repository\Result\ResultRepositoryInterface::class,
             \App\Repository\Result\ResultRepository::class
         );
+
+        $this->app->singleton(
+            \App\Repository\User\UserRepositoryInterface::class,
+            \App\Repository\User\UserRepository::class
+        );
     }
 
     /**

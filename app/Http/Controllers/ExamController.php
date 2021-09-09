@@ -8,7 +8,6 @@ use App\Models\Quiz;
 use App\Models\Exam;
 use App\Models\Result;
 use Illuminate\Support\Facades\Auth;
-use App\Enums\QuizStatus;
 
 class ExamController extends Controller
 {

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 
@@ -43,4 +44,5 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/exam-start/{id}', [ExamController::class, 'exam'])->name('exam.start');
     Route::get('/exam-result', [ExamController::class, 'examResult'])->name('exam.result');
     Route::get('/result-detail/{id}', [ExamController::class, 'resultDetails'])->name('exam.resultDetail');
+    Route::get('/my-profile/{id}', [UserController::class, 'myProfile'])->name('myProfile');
 });
